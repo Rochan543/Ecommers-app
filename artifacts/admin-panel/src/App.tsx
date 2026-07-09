@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Toaster as ShadcnToaster } from '@/components/ui/toaster';
 import { Toaster as SonnerToaster } from 'sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
@@ -166,6 +167,8 @@ function AppRouter() {
         </AdminLayout>
       </Route>
 =======
+=======
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
@@ -193,6 +196,9 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route component={NotFound} />
+<<<<<<< HEAD
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
+=======
 >>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
     </Switch>
   );
@@ -204,10 +210,16 @@ function App() {
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <AppRouter />
         </WouterRouter>
         <ShadcnToaster />
         <SonnerToaster position="top-right" richColors />
+=======
+          <Router />
+        </WouterRouter>
+        <Toaster />
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 =======
           <Router />
         </WouterRouter>

@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+=======
+import React, { useEffect, useCallback } from 'react';
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 =======
 import React, { useEffect, useCallback } from 'react';
 >>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
@@ -57,7 +61,10 @@ export default function SplashScreen() {
   const router = useRouter();
   const { user, loading } = useAuth();
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [animationDone, setAnimationDone] = useState(false);
+=======
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 =======
 >>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 
@@ -71,6 +78,7 @@ export default function SplashScreen() {
   const containerOpacity = useSharedValue(1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Navigate once animation is done AND auth has loaded — avoids stale closure bug
   useEffect(() => {
     if (animationDone && !loading) {
@@ -78,11 +86,16 @@ export default function SplashScreen() {
     }
   }, [animationDone, loading, user, router]);
 =======
+=======
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
   const navigate = useCallback(() => {
     if (!loading) {
       router.replace(user ? '/(tabs)' : '/(auth)/login');
     }
   }, [user, loading, router]);
+<<<<<<< HEAD
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
+=======
 >>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 
   useEffect(() => {
@@ -111,9 +124,15 @@ export default function SplashScreen() {
     sweepX.value = withDelay(1200, withTiming(W * 1.4, { duration: 750, easing: Easing.inOut(Easing.quad) }));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // 2500ms — fade out; signal JS side that animation finished
     containerOpacity.value = withDelay(2500, withTiming(0, { duration: 500 }, (finished) => {
       if (finished) runOnJS(setAnimationDone)(true);
+=======
+    // 2500ms — fade out and navigate
+    containerOpacity.value = withDelay(2500, withTiming(0, { duration: 500 }, (finished) => {
+      if (finished) runOnJS(navigate)();
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 =======
     // 2500ms — fade out and navigate
     containerOpacity.value = withDelay(2500, withTiming(0, { duration: 500 }, (finished) => {

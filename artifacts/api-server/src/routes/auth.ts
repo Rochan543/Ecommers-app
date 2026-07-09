@@ -130,7 +130,10 @@ router.get("/me", authMiddleware, async (req: AuthRequest, res) => {
     avatar: user.avatar,
     phone: user.phone,
 <<<<<<< HEAD
+<<<<<<< HEAD
     isAdmin: user.isAdmin,
+=======
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 =======
 >>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
     createdAt: user.createdAt.toISOString(),

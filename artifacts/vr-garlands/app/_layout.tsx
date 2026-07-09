@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { View } from 'react-native';
+=======
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 =======
 >>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -97,7 +100,11 @@ export default function RootLayout() {
   }, [fontsLoaded, fontError]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!fontsLoaded && !fontError) return <View style={{ flex: 1, backgroundColor: '#0D0500' }} />;
+=======
+  if (!fontsLoaded && !fontError) return null;
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 =======
   if (!fontsLoaded && !fontError) return null;
 >>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968

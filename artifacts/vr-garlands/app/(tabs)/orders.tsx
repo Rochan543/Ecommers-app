@@ -53,7 +53,11 @@ export default function OrdersScreen() {
             <TouchableOpacity
               style={[styles.card, { borderColor: colors.border, backgroundColor: colors.card }]}
 <<<<<<< HEAD
+<<<<<<< HEAD
               onPress={() => router.push(`/order-tracking/${item.id}` as never)}
+=======
+              onPress={() => router.push(`/checkout?orderId=${item.id}`)}
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 =======
               onPress={() => router.push(`/checkout?orderId=${item.id}`)}
 >>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
