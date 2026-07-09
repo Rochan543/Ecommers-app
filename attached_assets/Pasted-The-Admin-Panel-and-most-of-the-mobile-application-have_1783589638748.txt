@@ -1,0 +1,268 @@
+The Admin Panel and most of the mobile application have been completed.
+
+Now stop building new features.
+
+Switch into QA, Debugging, Testing, and Production Validation mode.
+
+Your objective is to ensure the application works perfectly on a real Android and iPhone device using Expo Go and later EAS Build.
+
+DO NOT assume the app works because Metro Bundler starts.
+
+Verify everything by testing the complete application.
+
+=========================================
+
+PHASE 1 — MOBILE APP VERIFICATION
+
+Run the application completely.
+
+Verify:
+
+- Splash Screen
+- Google Login
+- Home Screen
+- Search
+- Categories
+- Product Details
+- Wishlist
+- Cart
+- Checkout
+- Payment
+- Orders
+- Order Tracking
+- Notifications
+- Profile
+- Settings
+- Logout
+
+Every screen must load correctly.
+
+No blank screen.
+
+No crashes.
+
+No infinite loading.
+
+No navigation loops.
+
+=========================================
+
+PHASE 2 — EXPO VALIDATION
+
+Verify:
+
+- app.json
+- app.config.ts
+- package.json
+- Expo Router
+- Metro
+- Babel
+- Reanimated
+- Gesture Handler
+
+Fix any Expo configuration issues.
+
+Ensure compatibility with:
+
+- Android
+- Android Emulator
+- Expo Go
+- iPhone
+- EAS Build
+
+=========================================
+
+PHASE 3 — GOOGLE LOGIN
+
+Verify Google OAuth works on a real device.
+
+Verify:
+
+Android OAuth Client
+
+Web OAuth Client
+
+Redirect URI
+
+Expo Proxy
+
+JWT Generation
+
+Profile Creation
+
+Session Restoration
+
+If configuration is incomplete, explain exactly what credentials or setup are still required.
+
+=========================================
+
+PHASE 4 — DATABASE
+
+Verify every API connects successfully to Neon PostgreSQL.
+
+Check:
+
+Products
+
+Categories
+
+Wishlist
+
+Cart
+
+Orders
+
+Addresses
+
+Notifications
+
+Reviews
+
+Support Tickets
+
+Coupons
+
+Offers
+
+Inventory
+
+No endpoint should fail.
+
+=========================================
+
+PHASE 5 — ADMIN PANEL
+
+Verify every Admin page works.
+
+Test every CRUD operation.
+
+Verify:
+
+Products
+
+Categories
+
+Inventory
+
+Orders
+
+Users
+
+Coupons
+
+Offers
+
+Banners
+
+Notifications
+
+Reviews
+
+Support
+
+Analytics
+
+Settings
+
+Every change must immediately reflect inside the mobile app.
+
+=========================================
+
+PHASE 6 — RAZORPAY
+
+Verify:
+
+Create Order API
+
+Payment Verification
+
+Webhook
+
+Payment Failure
+
+Payment Success
+
+Retry Payment
+
+Refund API
+
+If live keys are missing, verify using Razorpay Test Mode and clearly identify what still needs production credentials.
+
+=========================================
+
+PHASE 7 — PERFORMANCE
+
+Detect:
+
+Memory leaks
+
+Render loops
+
+Slow screens
+
+Duplicate API requests
+
+Unnecessary re-renders
+
+Slow database queries
+
+Optimize everything.
+
+=========================================
+
+PHASE 8 — BUG HUNT
+
+Automatically scan the project.
+
+Find:
+
+Broken buttons
+
+Broken navigation
+
+Broken APIs
+
+Unused code
+
+TypeScript issues
+
+ESLint issues
+
+Runtime exceptions
+
+React warnings
+
+Prisma issues
+
+Fix everything.
+
+=========================================
+
+PHASE 9 — PRODUCTION READINESS
+
+Verify the application can be built for production.
+
+Run:
+
+- Expo Doctor
+- TypeScript Check
+- ESLint
+- Prisma Validation
+
+Fix every issue.
+
+=========================================
+
+FINAL REPORT
+
+Do not simply say "it works."
+
+Provide a detailed report containing:
+
+✓ Features tested successfully
+✓ Bugs fixed
+✓ Remaining issues (if any)
+✓ Configuration still required (Google OAuth, Razorpay, etc.)
+✓ Production readiness status
+
+Only mark the project complete when it has been validated on the complete mobile application flow and is ready for Android and iOS deployment.

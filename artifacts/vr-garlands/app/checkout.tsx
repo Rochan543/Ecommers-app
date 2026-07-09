@@ -50,11 +50,8 @@ export default function CheckoutScreen() {
       // Clear cart query
       queryClient.invalidateQueries({ queryKey: getGetCartQueryKey() });
 
-      Alert.alert(
-        'Order Placed!',
-        `Your order #${order.id.slice(-8).toUpperCase()} has been placed successfully. Payment via Razorpay will be available soon.`,
-        [{ text: 'OK', onPress: () => router.replace('/(tabs)/orders') }],
-      );
+      // Navigate to success screen (Razorpay integration via EAS Build)
+      router.replace(`/payment-success?orderId=${order.id}` as never);
     } catch {
       Alert.alert('Error', 'Failed to place order. Please try again.');
     } finally {
