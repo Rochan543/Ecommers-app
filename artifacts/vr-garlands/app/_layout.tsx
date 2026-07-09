@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
+<<<<<<< HEAD
 import { View } from 'react-native';
+=======
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { KeyboardProvider } from 'react-native-keyboard-controller';
@@ -93,7 +96,11 @@ export default function RootLayout() {
     }
   }, [fontsLoaded, fontError]);
 
+<<<<<<< HEAD
   if (!fontsLoaded && !fontError) return <View style={{ flex: 1, backgroundColor: '#0D0500' }} />;
+=======
+  if (!fontsLoaded && !fontError) return null;
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 
   return (
     <SafeAreaProvider>

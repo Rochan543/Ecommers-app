@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+=======
+import React, { useEffect, useCallback } from 'react';
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
 import Animated, {
   useSharedValue,
@@ -52,7 +56,10 @@ function Petal({ top, left, delay, angle, size }: { top: number; left: number; d
 export default function SplashScreen() {
   const router = useRouter();
   const { user, loading } = useAuth();
+<<<<<<< HEAD
   const [animationDone, setAnimationDone] = useState(false);
+=======
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 
   const bgOpacity = useSharedValue(0);
   const logoScale = useSharedValue(0.35);
@@ -63,12 +70,20 @@ export default function SplashScreen() {
   const sweepOpacity = useSharedValue(0);
   const containerOpacity = useSharedValue(1);
 
+<<<<<<< HEAD
   // Navigate once animation is done AND auth has loaded — avoids stale closure bug
   useEffect(() => {
     if (animationDone && !loading) {
       router.replace(user ? '/(tabs)' : '/(auth)/login');
     }
   }, [animationDone, loading, user, router]);
+=======
+  const navigate = useCallback(() => {
+    if (!loading) {
+      router.replace(user ? '/(tabs)' : '/(auth)/login');
+    }
+  }, [user, loading, router]);
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
 
   useEffect(() => {
     // 0ms — background fades in
@@ -95,9 +110,15 @@ export default function SplashScreen() {
     ));
     sweepX.value = withDelay(1200, withTiming(W * 1.4, { duration: 750, easing: Easing.inOut(Easing.quad) }));
 
+<<<<<<< HEAD
     // 2500ms — fade out; signal JS side that animation finished
     containerOpacity.value = withDelay(2500, withTiming(0, { duration: 500 }, (finished) => {
       if (finished) runOnJS(setAnimationDone)(true);
+=======
+    // 2500ms — fade out and navigate
+    containerOpacity.value = withDelay(2500, withTiming(0, { duration: 500 }, (finished) => {
+      if (finished) runOnJS(navigate)();
+>>>>>>> 4e5fa148011f842be5ef2a3e5fc74bfe823ce968
     }));
   }, []);
 
