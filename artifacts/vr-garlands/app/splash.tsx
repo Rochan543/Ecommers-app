@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
 import Animated, {
   useSharedValue,
@@ -52,6 +52,7 @@ function Petal({ top, left, delay, angle, size }: { top: number; left: number; d
 export default function SplashScreen() {
   const router = useRouter();
   const { user, loading } = useAuth();
+  const [animationDone, setAnimationDone] = useState(false);
 
   const bgOpacity = useSharedValue(0);
   const logoScale = useSharedValue(0.35);
@@ -62,11 +63,12 @@ export default function SplashScreen() {
   const sweepOpacity = useSharedValue(0);
   const containerOpacity = useSharedValue(1);
 
-  const navigate = useCallback(() => {
-    if (!loading) {
+  // Navigate once animation is done AND auth has loaded — avoids stale closure bug
+  useEffect(() => {
+    if (animationDone && !loading) {
       router.replace(user ? '/(tabs)' : '/(auth)/login');
     }
-  }, [user, loading, router]);
+  }, [animationDone, loading, user, router]);
 
   useEffect(() => {
     // 0ms — background fades in
@@ -93,9 +95,9 @@ export default function SplashScreen() {
     ));
     sweepX.value = withDelay(1200, withTiming(W * 1.4, { duration: 750, easing: Easing.inOut(Easing.quad) }));
 
-    // 2500ms — fade out and navigate
+    // 2500ms — fade out; signal JS side that animation finished
     containerOpacity.value = withDelay(2500, withTiming(0, { duration: 500 }, (finished) => {
-      if (finished) runOnJS(navigate)();
+      if (finished) runOnJS(setAnimationDone)(true);
     }));
   }, []);
 
