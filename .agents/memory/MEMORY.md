@@ -1,0 +1,1 @@
+- [VR Garlands setup fixes](vr-garlands-setup.md) — missing packages, TS fixes, auth/payment/cart security hardening done during initial import setup

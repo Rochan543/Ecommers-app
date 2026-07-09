@@ -1,0 +1,259 @@
+# VR GARLANDS --- Master Build Prompt for Replit AI
+
+> **Purpose:** Build a premium production-ready mobile application for
+> **VR GARLANDS** that visually matches the attached reference screens
+> as closely as technically practical while replacing branding and
+> implementing the required backend.
+
+------------------------------------------------------------------------
+
+# 1. Project Objective
+
+Build a React Native Expo application for **VR GARLANDS**.
+
+The attached reference images are the visual benchmark.
+
+The application should preserve the same premium experience: - Layout
+hierarchy - Card styles - Spacing - Typography hierarchy - Rounded
+corners - Shadows - Motion - Navigation patterns - Screen transitions
+
+Only these functional changes are required:
+
+-   Blinkit branding → VR GARLANDS
+-   Grocery catalog → Flowers, Garlands & Pooja products
+-   OTP login → Google Sign-In
+-   Razorpay payments
+-   Neon PostgreSQL backend
+-   Node.js + Express API
+-   Prisma ORM
+
+------------------------------------------------------------------------
+
+# 2. Technology Stack
+
+## Mobile
+
+-   React Native Expo
+-   TypeScript
+-   Expo Router
+-   NativeWind
+-   React Query
+-   Reanimated v3
+-   React Native Gesture Handler
+-   FlashList
+-   React Hook Form
+-   Zod
+
+## Backend
+
+-   Node.js
+-   Express.js
+-   Prisma ORM
+-   Neon PostgreSQL
+-   JWT Authentication
+-   Google OAuth
+-   REST API
+
+------------------------------------------------------------------------
+
+# 3. Database
+
+Use **Neon PostgreSQL** as the only database.
+
+No Supabase. No Firebase. No MongoDB.
+
+Everything must come from Neon PostgreSQL.
+
+Create normalized tables:
+
+-   users
+-   profiles
+-   categories
+-   sub_categories
+-   products
+-   product_images
+-   inventory
+-   cart
+-   cart_items
+-   wishlist
+-   orders
+-   order_items
+-   payments
+-   payment_transactions
+-   addresses
+-   reviews
+-   offers
+-   coupons
+-   banners
+-   carousel
+-   notifications
+-   settings
+-   support_tickets
+-   delivery_slots
+-   search_history
+-   recently_viewed
+
+Use UUID primary keys, foreign keys, indexes, timestamps, constraints
+and Prisma migrations.
+
+------------------------------------------------------------------------
+
+# 4. Authentication
+
+Remove OTP completely.
+
+Implement:
+
+Splash Screen
+
+↓
+
+Google Login
+
+↓
+
+Backend Verification
+
+↓
+
+JWT
+
+↓
+
+Create user if first login
+
+↓
+
+Navigate Home
+
+------------------------------------------------------------------------
+
+# 5. Splash Screen
+
+Premium animated logo.
+
+Sequence:
+
+-   Fade
+-   Scale
+-   Flower petals
+-   Gold light sweep
+-   Glow
+-   Gradient background
+-   Smooth transition
+
+Target 60 FPS.
+
+------------------------------------------------------------------------
+
+# 6. Home Screen
+
+Closely match the reference.
+
+Include:
+
+-   Delivery header
+-   Address
+-   Search
+-   Voice search
+-   Banner carousel
+-   Categories
+-   Product carousels
+-   Offers
+-   Bottom navigation
+
+Replace grocery content with VR Garlands catalog.
+
+------------------------------------------------------------------------
+
+# 7. Product Experience
+
+-   Product cards
+-   Wishlist
+-   Add to cart
+-   Product details
+-   Image carousel
+-   Related products
+-   Reviews
+-   Delivery estimate
+
+All loaded from Neon PostgreSQL.
+
+------------------------------------------------------------------------
+
+# 8. Payments
+
+Use Razorpay.
+
+Create payment service, verification endpoint and webhook.
+
+Do not hardcode credentials.
+
+------------------------------------------------------------------------
+
+# 9. Admin Panel
+
+Create a separate admin app with:
+
+-   Google Login
+-   Dashboard
+-   Products
+-   Categories
+-   Inventory
+-   Orders
+-   Offers
+-   Coupons
+-   Users
+-   Analytics
+
+All CRUD operations update Neon PostgreSQL.
+
+------------------------------------------------------------------------
+
+# 10. Restrictions
+
+Do NOT use:
+
+-   AsyncStorage
+-   LocalStorage
+-   SessionStorage
+-   Mock APIs
+-   Hardcoded business data
+
+Use React Query only for runtime in-memory caching.
+
+------------------------------------------------------------------------
+
+# 11. Code Quality
+
+-   TypeScript strict mode
+-   Clean Architecture
+-   SOLID principles
+-   Feature-based folders
+-   Reusable components
+-   Reusable hooks
+-   Zero lint errors
+-   Zero TypeScript errors
+
+------------------------------------------------------------------------
+
+# 12. Acceptance Criteria
+
+The project is complete only when:
+
+-   UI closely matches the provided reference images while using VR
+    Garlands branding.
+-   Google Sign-In works.
+-   Neon PostgreSQL is fully integrated.
+-   Prisma migrations are included.
+-   Express REST APIs are complete.
+-   Razorpay architecture is ready.
+-   All screens use live database data.
+-   Smooth animations are implemented.
+-   Android and iOS builds succeed.
+-   Production-ready codebase.
+
+> Use the attached reference images as the visual benchmark throughout
+> development. Do not redesign the experience; preserve the overall
+> interaction model while adapting the branding and product content for
+> VR Garlands.

@@ -1,0 +1,23 @@
+kind = "mobile"
+previewPath = "/"
+title = "VR Garlands"
+version = "1.0.0"
+id = "artifacts/vr-garlands"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/" ]
+localPort = 24849
+
+[services.development]
+run = "pnpm --filter @workspace/vr-garlands run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/vr-garlands", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/vr-garlands", "run", "serve" ]
+
+[services.env]
+PORT = "24849"
+BASE_PATH = "/"

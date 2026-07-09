@@ -1,0 +1,684 @@
+Yes. Since Replit has already generated most of the project, this prompt is specifically for **continuing and finishing** the remaining functionality instead of rebuilding the app.
+
+---
+
+# CONTINUE BUILDING VR GARLANDS (DO NOT REBUILD)
+
+## IMPORTANT
+
+Do **NOT** regenerate the project.
+
+Do **NOT** overwrite any existing screens.
+
+Do **NOT** replace working code.
+
+Continue from the current project state.
+
+Before writing any code:
+
+1. Analyze the entire existing project.
+2. Read every screen, component, API route, Prisma schema, and database model.
+3. Detect incomplete features.
+4. Detect TODOs.
+5. Detect placeholder data.
+6. Detect hardcoded values.
+7. Detect disconnected screens.
+8. Continue implementation without breaking the existing project.
+
+---
+
+# MAIN OBJECTIVE
+
+Finish every remaining feature.
+
+Nothing should remain incomplete.
+
+Every screen must work.
+
+Every button must work.
+
+Every API must work.
+
+Every database operation must work.
+
+Everything must be connected.
+
+---
+
+# DATABASE
+
+Backend uses
+
+**Neon PostgreSQL**
+
+using
+
+* Prisma ORM
+* Express
+* Node.js
+
+Every screen must read/write data from PostgreSQL.
+
+Never use
+
+* Local JSON
+* Hardcoded arrays
+* Mock APIs
+* Placeholder objects
+
+Everything comes from PostgreSQL.
+
+---
+
+# ADMIN PANEL
+
+The Admin Panel is the **master controller** of the application.
+
+Anything created in Admin must immediately appear inside the mobile application.
+
+Anything updated in Admin must immediately update inside the mobile application.
+
+Anything deleted in Admin must immediately disappear from the mobile application.
+
+---
+
+## Connect Admin Panel to Database
+
+Connect every module.
+
+### Products
+
+Admin can
+
+* Create Product
+* Edit Product
+* Delete Product
+* Upload Images
+* Change Price
+* Change Offer
+* Change Stock
+* Enable/Disable Product
+
+Immediately update PostgreSQL.
+
+Immediately reflect inside mobile app.
+
+---
+
+### Categories
+
+Admin can
+
+* Create Category
+* Edit Category
+* Delete Category
+* Upload Category Image
+* Change Order
+
+Immediately update Home Screen.
+
+---
+
+### Carousel
+
+Admin can
+
+* Upload Banner
+* Edit Banner
+* Delete Banner
+* Change Display Order
+* Enable/Disable Banner
+
+Mobile carousel updates automatically.
+
+---
+
+### Offers
+
+Admin can
+
+* Create Offer
+* Flash Sale
+* Festival Offer
+* Wedding Offer
+* Temple Offer
+
+Show instantly inside app.
+
+---
+
+### Coupons
+
+Admin can
+
+Create
+
+Edit
+
+Disable
+
+Delete
+
+Expiry
+
+Usage Limit
+
+Minimum Order
+
+Maximum Discount
+
+Percentage Discount
+
+Flat Discount
+
+Everything connected.
+
+---
+
+### Inventory
+
+Admin can
+
+Update Stock
+
+Low Stock Alert
+
+Out Of Stock
+
+Reserved Quantity
+
+Available Quantity
+
+Everything updates products instantly.
+
+---
+
+### Orders
+
+Admin can
+
+Accept Order
+
+Reject Order
+
+Prepare Order
+
+Pack Order
+
+Assign Delivery
+
+Out For Delivery
+
+Delivered
+
+Cancelled
+
+Realtime updates on customer app.
+
+---
+
+### Customers
+
+Admin can
+
+View Users
+
+Search Users
+
+Block User
+
+Unblock User
+
+Reset User
+
+View Orders
+
+View Addresses
+
+Everything connected.
+
+---
+
+### Notifications
+
+Admin sends
+
+Offer Notification
+
+Order Notification
+
+Festival Notification
+
+General Notification
+
+Customer receives instantly.
+
+---
+
+### Reviews
+
+Admin
+
+Approve Review
+
+Reject Review
+
+Delete Review
+
+Report Review
+
+Everything connected.
+
+---
+
+### Support
+
+Admin
+
+View Tickets
+
+Reply
+
+Close Ticket
+
+Reopen Ticket
+
+Customer sees replies.
+
+---
+
+### Analytics
+
+Dashboard should display
+
+Total Users
+
+Total Orders
+
+Revenue
+
+Products
+
+Categories
+
+Best Selling Products
+
+Low Stock
+
+Cancelled Orders
+
+Daily Sales
+
+Monthly Sales
+
+Yearly Sales
+
+Revenue Graph
+
+Top Categories
+
+Everything comes from PostgreSQL.
+
+---
+
+# MOBILE APP
+
+Connect every screen.
+
+---
+
+## Home
+
+Categories
+
+Carousel
+
+Featured
+
+Offers
+
+Trending
+
+Recommended
+
+Best Sellers
+
+Recently Viewed
+
+Popular Products
+
+Everything loads from database.
+
+---
+
+## Search
+
+Live Search
+
+Suggestions
+
+History
+
+Popular Searches
+
+Everything from PostgreSQL.
+
+---
+
+## Categories
+
+Load dynamically.
+
+No hardcoded categories.
+
+---
+
+## Product Details
+
+Load
+
+Images
+
+Variants
+
+Reviews
+
+Ratings
+
+Offers
+
+Related Products
+
+Frequently Bought Together
+
+Everything from database.
+
+---
+
+## Wishlist
+
+Add
+
+Remove
+
+Sync database.
+
+---
+
+## Cart
+
+Realtime cart.
+
+Increase Quantity.
+
+Decrease Quantity.
+
+Delete Item.
+
+Coupon.
+
+Gift Message.
+
+Everything connected.
+
+---
+
+## Checkout
+
+Address
+
+Delivery Slot
+
+Coupon
+
+Payment
+
+Review
+
+Order
+
+Everything connected.
+
+---
+
+## Orders
+
+History
+
+Tracking
+
+Invoice
+
+Cancel
+
+Reorder
+
+Everything connected.
+
+---
+
+## Profile
+
+Addresses
+
+Payments
+
+Wishlist
+
+Orders
+
+Notifications
+
+Settings
+
+Logout
+
+Everything connected.
+
+---
+
+# GOOGLE LOGIN
+
+Only Google Login.
+
+No OTP.
+
+No Email Password.
+
+Store user profile in PostgreSQL.
+
+Generate JWT.
+
+Protect every API.
+
+---
+
+# RAZORPAY
+
+Prepare production architecture.
+
+Create
+
+Payment Service
+
+Verification API
+
+Webhook
+
+Order API
+
+Refund API
+
+Do NOT hardcode keys.
+
+Use environment variables.
+
+---
+
+# IMAGES
+
+Store images in Cloudinary.
+
+Store URLs inside PostgreSQL.
+
+Never hardcode image URLs.
+
+---
+
+# APIs
+
+Finish every API.
+
+Products
+
+Orders
+
+Wishlist
+
+Cart
+
+Categories
+
+Offers
+
+Coupons
+
+Notifications
+
+Payments
+
+Inventory
+
+Users
+
+Reviews
+
+Support
+
+Everything CRUD.
+
+---
+
+# PRISMA
+
+Finish Prisma schema.
+
+Relationships.
+
+Indexes.
+
+Constraints.
+
+Cascade.
+
+Transactions.
+
+Seed data.
+
+---
+
+# SECURITY
+
+JWT Authentication.
+
+Role Based Access.
+
+Admin Middleware.
+
+Input Validation.
+
+SQL Injection Protection.
+
+Rate Limiting.
+
+Helmet.
+
+CORS.
+
+Environment Variables.
+
+---
+
+# PERFORMANCE
+
+Lazy Loading.
+
+Pagination.
+
+Infinite Scroll.
+
+Image Optimization.
+
+FlashList.
+
+Memoization.
+
+No unnecessary API calls.
+
+---
+
+# ERROR HANDLING
+
+Handle
+
+Network Errors.
+
+Server Errors.
+
+404.
+
+405.
+
+406.
+
+407.
+
+Retry.
+
+Offline UI.
+
+Loading Skeletons.
+
+---
+
+# CODE QUALITY
+
+No duplicate code.
+
+No TODO.
+
+No placeholder UI.
+
+No mock data.
+
+No unused components.
+
+No unused imports.
+
+No console.log.
+
+Zero TypeScript errors.
+
+Zero ESLint errors.
+
+---
+
+# FINAL VERIFICATION
+
+Before considering the project complete, automatically verify:
+
+* Every mobile screen is connected to Neon PostgreSQL.
+* Every admin action updates the mobile app.
+* Every CRUD operation works correctly.
+* Every Prisma model is used.
+* Every API endpoint is implemented and tested.
+* Every button performs its intended action.
+* Google Sign-In is fully functional.
+* Razorpay payment flow is production-ready (credentials via environment variables).
+* Images are managed through Cloudinary and referenced from PostgreSQL.
+* No hardcoded business data remains.
+* No disconnected screens exist.
+* The application builds successfully with zero TypeScript errors, zero ESLint errors, and no runtime crashes.
+* Do **not** stop after fixing one issue. Continue auditing, implementing, and connecting features until the entire application is production-ready.
+
+**Final instruction:** Treat this as a production e-commerce application. If you find any missing functionality, broken integration, or incomplete feature, implement it automatically and ensure it is fully connected to both the **Admin Panel** and the **Neon PostgreSQL database** before marking the project as complete.
